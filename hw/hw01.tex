@@ -3,154 +3,55 @@
 
 
 \begin{enumerate}
-    \item [1.] \textbf{Q.} Solve the Dirac wave equation \textbf{A.} Plane wave solution to Dirac Equation
-    
-    $$
-    \begin{aligned}        
-    i \gamma^\mu \partial_\mu \psi -m \psi &= 0 
-    \end{aligned}
-    $$
+    \item [1.] (5×6=30) One challenge for architects is that the design created today will require several years of implementation, verification, and testing before appearing on the market. This means that the architects must project what the technology will be like several years in advance. Sometimes, this is difficult to do. 
 
-    Positive and negative frequency ansatz
+    \begin{enumerate}
+        \item [a.] \textbf{Q.} According to the trend in device scaling historically observed by Moore’s Law, the number of transistors on a chip in 2025 should be how many times the number in 2015? \textbf{A.}
+        
+        \item [b.] \textbf{Q.} The increase in performance once mirrored this trend. Had performance continued to climb at the same rate as in the 1990s, approximately what performance would processors in 2025 have over the IBM RS6000/540 (Figure 1.1 of the textbook) back in 1990? \textbf{A.}
+        
+        \item [c.] \textbf{Q.} At the increase rate after 2015, what is a more updated projection of performance in 2025? \textbf{A.}
+        
+        \item [d.] \textbf{Q.} What has limited the rate of growth of the clock rate, and what are architects doing with the extra transistors now to increase performance? 
 
-    $$
-    \begin{aligned}        
-    \psi^{+}(x) &= u(p) e^{-i p \cdot x}\\
-    \psi^{-}(x) &= v(p) e^{i p \cdot x}
-    \end{aligned}
-    $$
+        \item [e.] \textbf{Q.} The rate of growth for DRAM capacity has also slowed down. For 20 years, DRAM capacity improved by 60\% each year. If 8 Gbit DRAM was first available in 2015, and 16 Gbit DRAM is not available until 2019, what is the current DRAM capacity growth rate? 
+    \end{enumerate}
 
-    Insert positive then negative frequency ansatz into Dirac equation
+    \item [2.] (4×6=24)  Server farms such as Google and Yahoo! provide enough compute capacity for the highest request rate of the day. Imagine that most of the time these servers operate at only 60\% capacity. Assume further that the power does not scale linearly with the load; that is, when the servers are operating at 60\% capacity, they consume 90\% of maximum power. The servers could be turned off, but they would take too long to restart in response to more load. A new system has been proposed that allows for a quick restart but requires 20\% of the maximum power while in this “barely alive” state. 
 
-    $$
-    \begin{aligned}
-    i \gamma^\mu \partial_\mu \psi^{+}-m \psi^{+} & =0 \\
-    i \gamma^\mu\left(-i p_\mu\right) u(p) e^{-i p \cdot x}-m u(p) e^{-i p \cdot x} & =0 \\
-    \left[\gamma^\mu p_\mu-m\right] u(p) &= 0\\
-    i \gamma^\mu \partial_\mu \psi^{-}-m \psi^{-} &= 0 \\
-    i \gamma^\mu\left(i p_\mu\right) v(p) e^{i p \cdot x}-m v(p) e^{i p \cdot x} &=0 \\
-    \left[\gamma^\mu p_\mu+m\right] v(p) &=0 
-    \end{aligned}
-    $$
+    \begin{enumerate}
+        \item [a.] \textbf{Q.} How much power savings would be achieved by turning off 60\% of the servers? \textbf{A.}
+        
+        \item [b.] \textbf{Q.} How much power savings would be achieved by placing 60\% of the servers in the “barely alive” state? \textbf{A.}
+        
+        \item [c.] \textbf{Q.} How much power savings would be achieved by reducing the voltage by 20\% and frequency by 40\%? \textbf{A.}
+        
+        \item [d.] \textbf{Q.} How much power savings would be achieved by placing 30\% of the servers in the “barely alive” state and 30\% off? \textbf{A.}
+    \end{enumerate}
 
-    Solve both equations
+    \item [3.] (10) \textbf{Q.} Suppose a processor uses 105W of power while operating at 2.7 GHz, of which 3/4 is dynamic power. Suppose we want to run the same processor at a higher frequency which requires increasing the operating voltage proportionally as well. If the maximum dynamic power consumption that can be tolerated is 130W.How much can the processor frequency be sped up? \textbf{A.}
 
-    $$
-    \begin{aligned}
-    \left[\gamma^\mu p_\mu-m\right] u(p) &= 0 \\
-    \left[\gamma^\mu p_\mu+m\right] v(p) &=0
-    \end{aligned}
-    $$
+    \item [4.] (4×6=24) Your company sells a single-core machine that operates at 3 GHz clock frequency and 5 Volts operating voltage. Now, to compete with your competitors, you need to design new machines what are as follows:
 
-    Rest frame of both cases
+    \begin{enumerate}
+        \item [a.] \textbf{Q.}You want to design a second machine where you want to save 30\% dynamic power by lowering the clock frequency. What is the clock frequency of the new machine you should select? \textbf{A.}
 
-    $$
-    \begin{aligned}
-    \left[\gamma^0-I\right] u &= 0 \\
-    \left[\gamma^0+I\right] v &= 0
-    \end{aligned}
-    $$
-    
-    Dirac representation of the gamma matrices rest frame linearly independent solutions 
+        \item [b.] \textbf{Q.}You want to design a third machine that can save 40\% dynamic energy by lower the operating voltage. What is the new operating voltage you should select? \textbf{A.}
 
-    $$
-    \begin{aligned}
-    \gamma^0 &= \left(\begin{array}{cc}
-    I & 0 \\
-    0 & -I
-    \end{array}\right) \\
-    \gamma^i &= \left(\begin{array}{cc}
-    0 & \sigma^i \\
-    -\sigma^i & 0
-    \end{array}\right)\\
-    \left(\gamma^0-I\right) &= \left(\begin{array}{cc}
-    0 & 0 \\
-    0 & -2 I
-    \end{array}\right) \\
-    \left(\gamma^0+I\right) &= \left(\begin{array}{ll}
-    2 l & 0 \\
-    0 & 0
-    \end{array}\right) \\
-    \left[\gamma^0-I\right] u(m) & =0 \rightarrow u_1=\left(\begin{array}{l}
-    1 \\
-    0 \\
-    0 \\
-    0
-    \end{array}\right) \quad u_2=\left(\begin{array}{l}
-    0 \\
-    1 \\
-    0 \\
-    0
-    \end{array}\right) \\
-    \left[\gamma^0+I\right] v(m) & =0 \rightarrow v_1=\left(\begin{array}{l}
-    0 \\
-    0 \\
-    1 \\
-    0
-    \end{array}\right) \quad v_2=\left(\begin{array}{l}
-    0 \\
-    0 \\
-    0 \\
-    1
-    \end{array}\right)
-    \end{aligned}
-    $$
+        \item [c.] \textbf{Q.}Now, you have changed the clock frequency of your third machine to the clock frequency of your second machine. How much dynamic power will you save now? \textbf{A.}
 
-    Anything proportional to these solutions also works and a Latin index will be used to denote which of the two solutions it is: $u_r \quad v_s$. Use the Lorentz invariance of this $\bar{u} u$ and $\bar{v} v$ (implied by the Lorentz invariance of $\bar{\psi} \psi$ ) to arrive at normalization conditions satisfied by the arbitrary momentum generalization of the above rest frame solutions. 
+        \item [d.] \textbf{Q.}Your third machine with the new clock frequency has become popular in the market. So, you are launching now a dual-core version of this machine. Your company has an application that is 70\% parallelizable. How much will you gain on the execution time now in comparison to your first single-core machine? \textbf{A.}
+    \end{enumerate}
 
-    $$
-    \begin{aligned}
-    \bar{u}_r(p) u_s(p) &= \delta_{r s} \\
-    \bar{v}_r(p) v_s(p) &=- \delta_{r s}
-    \end{aligned}
-    $$
+    \item [5.] (3×4=12) Assume we are in the time period when Dennard scaling was true. Power density = P/A = 1
 
-    Find some arbitrary momentum solutions to $\left[\gamma^\mu p_\mu-m\right] u(p)=0$ and $\left[\gamma^\mu p_\mu+m\right] v(p)=0$, and then normalize them such that their rest frame limit is known, and so that they satisfy the associated normalization conditions.
+    \begin{enumerate}
+        \item [a.] \textbf{Q.} Define static energy and dynamic energy. List equations on how to calculate both types of energy. \textbf{A.}
 
-    $$
-    \begin{aligned}
-    \left(\gamma^\mu p_\mu-m\right)\left(\gamma^v p_v+m\right) &= \gamma^\mu p_\mu \gamma^v p_v-m^2 I\\
-    & = p_\mu p_v \gamma^\mu \gamma^v-m^2 I \\
-    & = \frac{1}{2} p_\mu p_v\left\{\gamma^\mu, \gamma^\nu\right\}-m^2 I \\
-    & = p_\mu p_v \eta^{\mu v}-m^2 I\\
-    & = m^2 I-m^2 I \\
-    & = 0
-    \end{aligned}
-    $$
-
-    Similarly
-
-    $$
-    \left(\gamma^v p_v+m\right)\left(-\gamma^\mu p_\mu+m\right)=0
-    $$
-
-    We therefore have the non normalized solutions to the momentum space Dirac equation
-
-    $$
-    \begin{aligned}
-    u_s^n(p) &= \left(\gamma^v p_v+m\right) u_s \\
-    v_r^n(p) &= \left(-\gamma^v p_v+m\right) v_r
-    \end{aligned}
-    $$
-
-    This provides us with two linearly independent solutions for arbitrary momentum to the respective positive and negative frequency equations. They, however do not reduce exactly to the simple rest frame solutions given above, and they do not satisfy the associated normalization conditions. Applying the standard normalization gives the following desired answers
-
-    $$
-    \begin{aligned}
-    u_s(p) &= \frac{\gamma^v p_v+m}{\sqrt{2 m(m+E)}} u_s \\
-    v_s(p) &= \frac{-\gamma^v p_v+m}{\sqrt{2 m(m+E)}} v_s
-    \end{aligned}
-    $$
-
-    This answer solves the Dirac equation and reduces to the above rest frame solutions. So, the positive and negative frequency plane wave solutions to the Dirac equations are:
-
-    $$
-    \begin{aligned}
-    \psi^{+}(x) &= \frac{\gamma^v p_v+m}{\sqrt{2 m(m+E)}} u_s e^{-i p \cdot x} \\
-    \psi^{-}(x) &= \frac{-\gamma^v p_v+m}{\sqrt{2 m(m+E)}} v_s e^{i p \cdot x}
-    \end{aligned}
-    $$
-    
+        \item [b.] \textbf{Q.} Take a member of the "Arm" family of processors. Report the number of its transistors. Assume that the average dynamic energy consumption of 180nm transistors is 0.2uJ. How much energy does this processor use? \textbf{A.}
+        
+        \item [c.] \textbf{Q.} Assuming that Dennard scaling is true and that we designed the same Arm processor with 90nm feature size. How is energy usage altered? \textbf{A.}
+    \end{enumerate}
     
 \end{enumerate}
 \end{document}
