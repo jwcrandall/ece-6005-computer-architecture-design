@@ -1,0 +1,156 @@
+\documentclass[main.tex]{subfiles}
+\begin{document}
+
+
+\begin{enumerate}
+    \item [1.] \textbf{Q.} Solve the Dirac wave equation \textbf{A.} Plane wave solution to Dirac Equation
+    
+    $$
+    \begin{aligned}        
+    i \gamma^\mu \partial_\mu \psi -m \psi &= 0 
+    \end{aligned}
+    $$
+
+    Positive and negative frequency ansatz
+
+    $$
+    \begin{aligned}        
+    \psi^{+}(x) &= u(p) e^{-i p \cdot x}\\
+    \psi^{-}(x) &= v(p) e^{i p \cdot x}
+    \end{aligned}
+    $$
+
+    Insert positive then negative frequency ansatz into Dirac equation
+
+    $$
+    \begin{aligned}
+    i \gamma^\mu \partial_\mu \psi^{+}-m \psi^{+} & =0 \\
+    i \gamma^\mu\left(-i p_\mu\right) u(p) e^{-i p \cdot x}-m u(p) e^{-i p \cdot x} & =0 \\
+    \left[\gamma^\mu p_\mu-m\right] u(p) &= 0\\
+    i \gamma^\mu \partial_\mu \psi^{-}-m \psi^{-} &= 0 \\
+    i \gamma^\mu\left(i p_\mu\right) v(p) e^{i p \cdot x}-m v(p) e^{i p \cdot x} &=0 \\
+    \left[\gamma^\mu p_\mu+m\right] v(p) &=0 
+    \end{aligned}
+    $$
+
+    Solve both equations
+
+    $$
+    \begin{aligned}
+    \left[\gamma^\mu p_\mu-m\right] u(p) &= 0 \\
+    \left[\gamma^\mu p_\mu+m\right] v(p) &=0
+    \end{aligned}
+    $$
+
+    Rest frame of both cases
+
+    $$
+    \begin{aligned}
+    \left[\gamma^0-I\right] u &= 0 \\
+    \left[\gamma^0+I\right] v &= 0
+    \end{aligned}
+    $$
+    
+    Dirac representation of the gamma matrices rest frame linearly independent solutions 
+
+    $$
+    \begin{aligned}
+    \gamma^0 &= \left(\begin{array}{cc}
+    I & 0 \\
+    0 & -I
+    \end{array}\right) \\
+    \gamma^i &= \left(\begin{array}{cc}
+    0 & \sigma^i \\
+    -\sigma^i & 0
+    \end{array}\right)\\
+    \left(\gamma^0-I\right) &= \left(\begin{array}{cc}
+    0 & 0 \\
+    0 & -2 I
+    \end{array}\right) \\
+    \left(\gamma^0+I\right) &= \left(\begin{array}{ll}
+    2 l & 0 \\
+    0 & 0
+    \end{array}\right) \\
+    \left[\gamma^0-I\right] u(m) & =0 \rightarrow u_1=\left(\begin{array}{l}
+    1 \\
+    0 \\
+    0 \\
+    0
+    \end{array}\right) \quad u_2=\left(\begin{array}{l}
+    0 \\
+    1 \\
+    0 \\
+    0
+    \end{array}\right) \\
+    \left[\gamma^0+I\right] v(m) & =0 \rightarrow v_1=\left(\begin{array}{l}
+    0 \\
+    0 \\
+    1 \\
+    0
+    \end{array}\right) \quad v_2=\left(\begin{array}{l}
+    0 \\
+    0 \\
+    0 \\
+    1
+    \end{array}\right)
+    \end{aligned}
+    $$
+
+    Anything proportional to these solutions also works and a Latin index will be used to denote which of the two solutions it is: $u_r \quad v_s$. Use the Lorentz invariance of this $\bar{u} u$ and $\bar{v} v$ (implied by the Lorentz invariance of $\bar{\psi} \psi$ ) to arrive at normalization conditions satisfied by the arbitrary momentum generalization of the above rest frame solutions. 
+
+    $$
+    \begin{aligned}
+    \bar{u}_r(p) u_s(p) &= \delta_{r s} \\
+    \bar{v}_r(p) v_s(p) &=- \delta_{r s}
+    \end{aligned}
+    $$
+
+    Find some arbitrary momentum solutions to $\left[\gamma^\mu p_\mu-m\right] u(p)=0$ and $\left[\gamma^\mu p_\mu+m\right] v(p)=0$, and then normalize them such that their rest frame limit is known, and so that they satisfy the associated normalization conditions.
+
+    $$
+    \begin{aligned}
+    \left(\gamma^\mu p_\mu-m\right)\left(\gamma^v p_v+m\right) &= \gamma^\mu p_\mu \gamma^v p_v-m^2 I\\
+    & = p_\mu p_v \gamma^\mu \gamma^v-m^2 I \\
+    & = \frac{1}{2} p_\mu p_v\left\{\gamma^\mu, \gamma^\nu\right\}-m^2 I \\
+    & = p_\mu p_v \eta^{\mu v}-m^2 I\\
+    & = m^2 I-m^2 I \\
+    & = 0
+    \end{aligned}
+    $$
+
+    Similarly
+
+    $$
+    \left(\gamma^v p_v+m\right)\left(-\gamma^\mu p_\mu+m\right)=0
+    $$
+
+    We therefore have the non normalized solutions to the momentum space Dirac equation
+
+    $$
+    \begin{aligned}
+    u_s^n(p) &= \left(\gamma^v p_v+m\right) u_s \\
+    v_r^n(p) &= \left(-\gamma^v p_v+m\right) v_r
+    \end{aligned}
+    $$
+
+    This provides us with two linearly independent solutions for arbitrary momentum to the respective positive and negative frequency equations. They, however do not reduce exactly to the simple rest frame solutions given above, and they do not satisfy the associated normalization conditions. Applying the standard normalization gives the following desired answers
+
+    $$
+    \begin{aligned}
+    u_s(p) &= \frac{\gamma^v p_v+m}{\sqrt{2 m(m+E)}} u_s \\
+    v_s(p) &= \frac{-\gamma^v p_v+m}{\sqrt{2 m(m+E)}} v_s
+    \end{aligned}
+    $$
+
+    This answer solves the Dirac equation and reduces to the above rest frame solutions. So, the positive and negative frequency plane wave solutions to the Dirac equations are:
+
+    $$
+    \begin{aligned}
+    \psi^{+}(x) &= \frac{\gamma^v p_v+m}{\sqrt{2 m(m+E)}} u_s e^{-i p \cdot x} \\
+    \psi^{-}(x) &= \frac{-\gamma^v p_v+m}{\sqrt{2 m(m+E)}} v_s e^{i p \cdot x}
+    \end{aligned}
+    $$
+    
+    
+\end{enumerate}
+\end{document}
